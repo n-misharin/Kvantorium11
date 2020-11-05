@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linear_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/auth1"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_auth_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:textSize="30sp"
+            android:textColor="@color/lightText"
+            android:textColorHint="@color/lightText"
+            android:id="@+id/auth_et_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/auth_login_hint"/>
+
+        <EditText
+            android:textSize="30sp"
+            android:textColor="@color/lightText"
+            android:textColorHint="@color/lightText"
+            android:id="@+id/auth_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/auth_password_hint"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linear_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:background="@color/colorPrimary"
+            android:text="@string/auth_enter_text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linear_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/lightText"
+            android:textSize="30sp"
+            android:text="@string/create_new_account"
+            android:id="@+id/tv_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/lightText"
+            android:textSize="30sp"
+            android:text="@string/forgot_password"
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+</LinearLayout>
