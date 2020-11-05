@@ -3,6 +3,6 @@
     <string name="auth_password_hint">Пароль</string>
     <string name="auth_login_hint">Логин</string>
     <string name="auth_enter_text">Войти</string>
-    <string name="create_new_account">Нет акаунта? создать</string>
+    <string name="create_new_account">Нет акаунта?</string>
     <string name="forgot_password">Забыли пароль?</string>
 </resources>
