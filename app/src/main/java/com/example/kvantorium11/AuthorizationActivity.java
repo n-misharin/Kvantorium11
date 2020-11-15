@@ -2,6 +2,7 @@ package com.example.kvantorium11;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -15,8 +16,11 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,33 +29,36 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class AuthorizationActivity extends AppCompatActivity {
 
-    public static final String TAG = "AGAGA";
+    public static final String TAG = "debug auth activity";
 
     private LinearLayout backgroundLinearLayout;
-    private ImageView logoImageView;
-
-    private Bitmap backgroundBitmap, logoBitmap;
+    private TextView registrationTextView, forgotPasswordTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorization);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Objects.requireNonNull(getSupportActionBar()).hide();
         }
         initUI();
+        setListeners();
     }
 
     private void initUI(){
+        registrationTextView = findViewById(R.id.tv_registration);
+        forgotPasswordTextView = findViewById(R.id.tv_forgot_password);
         backgroundLinearLayout = findViewById(R.id.linear_background);
-        logoImageView = findViewById(R.id.img_logo);
+
         Drawable drawableBack = new Drawable() {
             @Override
             public void draw(@NonNull Canvas canvas) {
-                backgroundBitmap = (new ImageConverter(getResources(), R.drawable.auth1,
+                Bitmap backgroundBitmap = (new ImageConverter(getResources(), R.drawable.auth1,
                         backgroundLinearLayout.getWidth(), backgroundLinearLayout.getHeight())
                 ).convert();
                 Paint paint = new Paint();
@@ -80,7 +87,25 @@ public class AuthorizationActivity extends AppCompatActivity {
                 return 0;
             }
         };
-        //logoImageView.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.logo1));
+
         backgroundLinearLayout.setBackgroundDrawable(drawableBack);
+    }
+
+    private void setListeners(){
+        registrationTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrationIntent = new Intent(AuthorizationActivity.this, RegistrationActivity.class);
+                startActivity(registrationIntent);
+            }
+        });
+
+        forgotPasswordTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgotPasswordIntent = new Intent(AuthorizationActivity.this, RecoverPasswordActivity.class);
+                startActivity(forgotPasswordIntent);
+            }
+        });
     }
 }

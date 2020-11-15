@@ -3,6 +3,10 @@
     <string name="auth_password_hint">Пароль</string>
     <string name="auth_login_hint">Логин</string>
     <string name="auth_enter_text">Войти</string>
-    <string name="create_new_account">Нет акаунта?</string>
-    <string name="forgot_password">Забыли пароль?</string>
+    <string name="create_new_account"><u>Регистрация</u></string>
+    <string name="forgot_password"><u>Восстановление пароля</u></string>
+    <string name="default_status">Войдите в акаунт</string>
+    <string name="error_status">Неверный логин или пароль</string>
+    <string name="success_status">Успешно</string>
+    <string name="kvantorium_logo">kvantorium logo</string>
 </resources>

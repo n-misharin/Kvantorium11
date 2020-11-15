@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linear_root_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/normal_margin"
+    android:paddingLeft="@dimen/normal_margin"
+    android:paddingStart="@dimen/normal_margin"
+    android:paddingRight="@dimen/normal_margin"
+    android:paddingEnd="@dimen/normal_margin">
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:id="@+id/linear_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <ImageView
+            android:scaleType="centerInside"
+            android:id="@+id/img_logo"
+            android:alpha="0.6"
+            android:src="@drawable/logo2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/kvantorium_logo" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="4"
+        android:id="@+id/linear_auth_enter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <EditText
+            android:inputType="textPersonName"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/lightText"
+            android:textColorHint="@color/lightText"
+            android:id="@+id/auth_et_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/auth_login_hint"
+            android:drawablePadding="@dimen/small_margin"
+            android:drawableStart="@drawable/user"
+            android:drawableLeft="@drawable/user"
+            android:importantForAutofill="no"/>
+
+        <EditText
+            android:inputType="textPassword"
+            android:textSize="@dimen/large_text"
+            android:textColor="@color/lightText"
+            android:textColorHint="@color/lightText"
+            android:id="@+id/auth_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/auth_password_hint"
+            android:drawablePadding="@dimen/small_margin"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawableStart="@drawable/password_icon"
+            android:importantForAutofill="no"
+            />
+        <TextView
+            android:textSize="@dimen/normal_text"
+            android:textColor="@color/lightText"
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_status"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:gravity="center_horizontal" />
+        <Button
+            android:textAllCaps="false"
+            android:paddingTop="@dimen/small_margin"
+            android:paddingBottom="@dimen/small_margin"
+            android:id="@+id/btn_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_text"
+            android:background="@drawable/rectangle_rounded"
+            android:textColor="@color/lightText"
+            android:text="@string/auth_enter_text"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:id="@+id/linear_registration"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/normal_text"
+            android:text="@string/create_new_account"
+            android:id="@+id/tv_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/colorInfo"
+            android:textSize="@dimen/normal_text"
+            android:text="@string/forgot_password"
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+</LinearLayout>
